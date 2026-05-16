@@ -1,5 +1,5 @@
 /* =========================================
-   小林助産院〜ふれる〜
+   小林助産院〜Fureru〜
    color: pastel peach / cream / soft sage
    ========================================= */
 
@@ -547,6 +547,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-text-soft);
   letter-spacing: .12em;
 }
+.service-category__intro {
+  max-width: 760px;
+  margin: -8px 0 36px;
+  font-size: 15px;
+  line-height: 2.1;
+  color: var(--color-text);
+}
 
 .service-list {
   display: grid;
@@ -613,6 +620,16 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-primary-dark);
   font-weight: 600;
 }
+.service-card__inline-note {
+  margin: 14px 0 4px;
+  padding: 10px 12px;
+  background: var(--color-bg-warm);
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0 4px 4px 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
 .service-card__num {
   position: absolute;
   top: 22px; right: 22px;
@@ -620,6 +637,241 @@ a { color: inherit; text-decoration: none; }
   font-style: italic;
   font-size: 18px;
   color: var(--color-primary-light);
+}
+
+/* ===== Expandable service card ===== */
+.service-card--expandable { padding: 0; }
+.service-card--expandable > details { width: 100%; }
+.service-card--expandable summary {
+  display: block;
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  transition: background .2s ease;
+}
+.service-card--expandable summary::-webkit-details-marker { display: none; }
+.service-card--expandable summary::marker { content: ""; }
+.service-card--expandable summary:hover { background: var(--color-bg-warm); }
+.service-card--expandable summary > .service-card__num { top: 28px; right: 28px; }
+.service-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 8px 14px 8px 16px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 999px;
+  background: var(--color-bg-warm);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--color-primary-dark);
+  transition: background .2s ease, color .2s ease;
+}
+.service-card--expandable summary:hover .service-card__more { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.service-card__more-icon {
+  position: relative;
+  width: 12px; height: 12px;
+  display: inline-block;
+}
+.service-card__more-icon::before,
+.service-card__more-icon::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 1.5px;
+  background: currentColor;
+  transform: translateY(-50%);
+  transition: transform .25s ease;
+}
+.service-card__more-icon::after {
+  inset: 0 50% auto 50%;
+  width: 1.5px; height: 100%;
+  background: currentColor;
+  transform: translateX(-50%);
+}
+.service-card--expandable details[open] .service-card__more-icon::after { transform: translateX(-50%) scaleY(0); }
+.service-card--expandable details[open] .service-card__more-text::before { content: "閉じる"; }
+.service-card--expandable details[open] .service-card__more-text { font-size: 0; }
+.service-card--expandable details[open] .service-card__more-text::before { font-size: 12px; }
+
+.service-card__detail {
+  padding: 26px 28px 28px;
+  border-top: 1px dashed var(--color-line);
+}
+.service-card__steps {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.service-card__steps > li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.service-card__steps .step-no {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  letter-spacing: .14em;
+  color: var(--color-primary-dark);
+  padding: 4px 10px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1.4;
+  background: var(--color-bg-warm);
+}
+.service-card__steps p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--color-text);
+}
+.service-card__note {
+  margin: 0 0 22px;
+  padding: 14px 18px;
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-sm, 6px);
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+.service-card__fees {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+}
+.service-card__fees > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 14px;
+}
+.service-card__fees dt { color: var(--color-text-mid); }
+.service-card__fees dd {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-primary-dark);
+  font-size: 15px;
+}
+.service-card__travel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-mid);
+}
+.service-card__travel strong { color: var(--color-text); font-weight: 500; }
+
+/* Detail blocks (rich content) */
+.detail-block {
+  margin: 0 0 28px;
+  padding: 0 0 24px;
+  border-bottom: 1px dotted var(--color-line);
+}
+.detail-block:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 22px; }
+.detail-block__title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: .14em;
+  margin: 0 0 14px;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.detail-block__title::before {
+  content: "";
+  width: 18px; height: 1px;
+  background: var(--color-primary);
+}
+.detail-block--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.detail-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--color-text);
+}
+.detail-text a, .detail-note-line a {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.detail-subtitle {
+  margin: 18px 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--color-text);
+}
+.detail-note-line {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-mid);
+}
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+.detail-list li {
+  position: relative;
+  padding-left: 18px;
+}
+.detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .85em;
+  width: 8px; height: 1px;
+  background: var(--color-primary);
+}
+.detail-list--cross li::before {
+  width: 9px; height: 9px;
+  top: .55em;
+  background: none;
+  border: 0;
+  background-image:
+    linear-gradient(45deg, transparent 45%, #c98277 45%, #c98277 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, #c98277 45%, #c98277 55%, transparent 55%);
+}
+.detail-list--check li::before {
+  width: 10px; height: 6px;
+  top: .55em;
+  background: none;
+  border-left: 1.5px solid var(--color-primary-dark);
+  border-bottom: 1.5px solid var(--color-primary-dark);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 640px) {
+  .service-card__steps > li { grid-template-columns: 1fr; gap: 8px; }
+  .service-card__steps .step-no { justify-self: start; }
+  .detail-block--two { grid-template-columns: 1fr; }
 }
 
 .service-note {
@@ -900,6 +1152,21 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
   color: var(--color-text-soft);
 }
+.contact-info .hours-notes {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  background: var(--color-bg-warm);
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0 6px 6px 0;
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+.contact-info .hours-notes li { padding-left: 0; }
+.contact-info .hours-notes strong { color: var(--color-primary-dark); font-weight: 500; }
 
 .form-frame {
   background: var(--color-white);
@@ -1412,6 +1679,14 @@ a { color: inherit; text-decoration: none; }
   position: absolute; left: 0; top: 15px;
   width: 10px; height: 1px; background: var(--color-primary);
 }
+.svc-overview__desc {
+  margin: 0 0 28px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--color-line);
+  font-size: 14px;
+  line-height: 2;
+  color: var(--color-text-mid);
+}
 .svc-overview__cta {
   margin-top: auto;
   display: inline-flex;
@@ -1719,6 +1994,32 @@ a { color: inherit; text-decoration: none; }
   line-height: 2.1;
   color: var(--color-text);
 }
+.about-vert-text .fureru-phrases {
+  list-style: none;
+  padding: 22px 24px;
+  margin: 8px 0 22px;
+  border-top: 1px dashed var(--color-line);
+  border-bottom: 1px dashed var(--color-line);
+  display: grid;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 15.5px;
+  line-height: 1.9;
+  letter-spacing: .04em;
+  color: var(--color-primary-dark);
+}
+.about-vert-text .fureru-phrases li {
+  position: relative;
+  padding-left: 18px;
+}
+.about-vert-text .fureru-phrases li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .85em;
+  width: 8px; height: 1px;
+  background: currentColor;
+  opacity: .5;
+}
 .about-vert-image {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -1878,7 +2179,8 @@ a { color: inherit; text-decoration: none; }
 
   /* About vertical stack */
   .about-vert-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-vert-body { padding-right: 0; }
+  .about-vert-body { padding-right: 0; order: 2; }
+  .about-vert-image { order: 1; }
 }
 
 @media (max-width: 640px) {
@@ -1923,9 +2225,14 @@ a { color: inherit; text-decoration: none; }
   .qa-num { font-size: 22px; }
   .qa-body { padding: 0 22px 22px 90px; font-size: 14px; }
 
-  /* Floating CTA smaller */
-  .fab-contact { padding: 16px 8px; font-size: 12px; letter-spacing: .3em; }
-  .fab-contact .fab-icon svg { width: 18px; height: 18px; }
+  /* Floating CTA smaller & lower on mobile, hide icon */
+  .fab-contact {
+    padding: 14px 6px;
+    font-size: 12px;
+    letter-spacing: .3em;
+    top: 65%;
+  }
+  .fab-contact .fab-icon { display: none; }
 
   /* Footer hours table — let it wrap */
   .footer-hours { grid-template-columns: 64px repeat(7, 1fr); font-size: 12px; }

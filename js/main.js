@@ -1,4 +1,4 @@
-/* 小林助産院〜ふれる〜 main.js */
+/* 小林助産院〜Fureru〜 main.js */
 (function () {
   'use strict';
 
