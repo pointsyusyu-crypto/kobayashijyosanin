@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>お問い合わせ・アクセス｜小林助産院〜ふれる〜</title>
+  <meta name="description" content="小林助産院〜ふれる〜へのお問い合わせ。お電話・メール・LINE・お問い合わせフォームから承ります。大阪府阪南市・泉南市エリアの訪問専門助産師。" />
+  <!-- ===== OGP / SNSシェア ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="小林助産院 〜ふれる〜" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:title" content="お問い合わせ・アクセス｜小林助産院〜ふれる〜" />
+  <meta property="og:description" content="小林助産院〜ふれる〜へのお問い合わせ。お電話・メール・LINE・お問い合わせフォームから承ります。大阪府阪南市・泉南市エリアの訪問専門助産師。" />
+  <meta property="og:url" content="https://YOUR-DOMAIN/contact.html" />
+  <meta property="og:image" content="https://YOUR-DOMAIN/images/about-fureru.png" />
+  <meta property="og:image:alt" content="小林助産院 〜ふれる〜" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="お問い合わせ・アクセス｜小林助産院〜ふれる〜" />
+  <meta name="twitter:description" content="小林助産院〜ふれる〜へのお問い合わせ。お電話・メール・LINE・お問い合わせフォームから承ります。大阪府阪南市・泉南市エリアの訪問専門助産師。" />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN/images/about-fureru.png" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-channels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 0 0 64px;
+    }
+    .ch-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      text-align: center;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ch-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary-light);
+    }
+    .ch-card__icon {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--color-bg-warm);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--color-primary);
+      margin: 0 0 18px;
+    }
+    .ch-card__icon svg { width: 24px; height: 24px; }
+    .ch-card__label {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      letter-spacing: .2em;
+      color: var(--color-text-mid);
+      margin: 0 0 8px;
+    }
+    .ch-card__value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      color: var(--color-primary-dark);
+      letter-spacing: .04em;
+      margin: 0 0 4px;
+      line-height: 1.2;
+    }
+    .ch-card__value--text {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      letter-spacing: .08em;
+    }
+    .ch-card__note {
+      font-size: 12px;
+      color: var(--color-text-soft);
+      margin: 6px 0 16px;
+      line-height: 1.7;
+    }
+    .ch-card__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-heading);
+      font-size: 12px;
+      letter-spacing: .15em;
+      background: var(--color-primary);
+      color: var(--color-white);
+      margin-top: auto;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .ch-card__btn:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+    .ch-card--line .ch-card__icon { background: #DCF1D8; color: #2DA64B; }
+    .ch-card--line .ch-card__btn { background: #2DA64B; }
+    .ch-card--line .ch-card__btn:hover { background: #228A3D; }
+
+    .info-block {
+      background: var(--color-white);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      padding: 40px 44px;
+    }
+    .info-block h3 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      letter-spacing: .12em;
+      margin: 0 0 24px;
+      font-weight: 500;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    @media (max-width: 900px) {
+      .contact-channels { grid-template-columns: 1fr; }
+      .info-block { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="小林助産院 ふれる トップへ">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="15" cy="20" r="9" />
+            <circle cx="25" cy="20" r="9" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">小林助産院</span>
+          <span class="brand-tag">〜 ふれる 〜</span>
+        </span>
+      </a>
+      <nav aria-label="グローバル">
+        <ul class="nav-list">
+          <li><a href="about.html">助産師について</a></li>
+          <li><a href="services.html">サービス</a></li>
+          <li><a href="hachidori.html">はちどりのお家</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="contact.html" class="is-active" aria-current="page">お問い合わせ</a></li>
+          <li>
+            <a href="https://www.instagram.com/kobayashijyosanin" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== FLOATING CONTACT BUTTON ========== -->
+  <a href="contact.html" class="fab-contact" aria-label="お問い合わせ">
+    <span class="fab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16v12H4z" />
+        <path d="M4 7l8 6 8-6" />
+      </svg>
+    </span>
+    <span>お問い合わせ</span>
+  </a>
+
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">HOME</a></li>
+          <li aria-current="page">お問い合わせ・アクセス</li>
+        </ol>
+        <p class="page-hero__en">contact</p>
+        <h1 class="page-hero__title">お問い合わせ・アクセス</h1>
+        <p class="page-hero__lead">
+          ご相談・ご予約は、お電話・メール・LINE・フォームよりお気軽にどうぞ。<br />
+          些細なことでもまずは声をかけてください。
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ========== CONTACT CHANNELS ========== -->
+    <section class="section" aria-labelledby="channels-title">
+      <div class="container">
+        <header class="section-head fade-in">
+          <span class="section-head__en">contact channels</span>
+          <h2 class="section-head__ja" id="channels-title">ご連絡方法</h2>
+        </header>
+
+        <div class="contact-channels fade-in">
+          <div class="ch-card">
+            <span class="ch-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <p class="ch-card__label">TEL</p>
+            <p class="ch-card__value">090-1449-3157</p>
+            <p class="ch-card__note">平日 9:00 〜 15:00（不定休）<br />留守番電話でも対応します。</p>
+            <a class="ch-card__btn" href="tel:09014493157">電話をかける</a>
+          </div>
+
+          <div class="ch-card">
+            <span class="ch-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <p class="ch-card__label">MAIL</p>
+            <p class="ch-card__value ch-card__value--text">kobayashijyosanin<br />@gmail.com</p>
+            <p class="ch-card__note">数日以内にお返事いたします。</p>
+            <a class="ch-card__btn" href="mailto:kobayashijyosanin@gmail.com">メールを送る</a>
+          </div>
+
+          <div class="ch-card ch-card--line">
+            <span class="ch-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c5.523 0 10 3.582 10 8 0 4.418-4.477 8-10 8a12 12 0 0 1-2.04-.175c-.5.494-2.04 1.91-3.43 2.46-.34.134-.59-.087-.524-.413.06-.286.39-1.96.39-2.61C3.51 16.83 2 14.55 2 11.997 2 7.582 6.477 3 12 3z"/></svg>
+            </span>
+            <p class="ch-card__label">LINE</p>
+            <p class="ch-card__value ch-card__value--text">公式 LINE</p>
+            <p class="ch-card__note">トーク・予約のやり取りができます。</p>
+            <a class="ch-card__btn" href="https://lin.ee/pcfmkkKf" target="_blank" rel="noopener noreferrer">LINE を開く</a>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- 連絡先情報 -->
+          <div class="contact-info fade-in">
+            <div class="info-block">
+              <h3>院 情報・アクセス</h3>
+              <dl>
+                <dt>院名</dt>
+                <dd>小林助産院 〜ふれる〜</dd>
+
+                <dt>代表</dt>
+                <dd>小林 美里（助産師）</dd>
+
+                <dt>住所</dt>
+                <dd>〒599-0212<br />大阪府阪南市自然田<br /><span style="font-size:13px;color:var(--color-text-soft);">※ 現在は訪問専門のため、お伺い対応となります。</span></dd>
+
+                <dt>対応エリア</dt>
+                <dd>
+                  阪南市・泉南市・泉州エリア中心<br />
+                  <span style="font-size:13px;color:var(--color-text-soft);">エリア外もまずはご相談ください。</span>
+                </dd>
+
+                <dt>交通費</dt>
+                <dd>
+                  <span style="font-size:13.5px; line-height: 1.9; display: block;">
+                    <strong style="color:var(--color-primary-dark);">阪南市・泉南市</strong>：無料<br />
+                    <strong style="color:var(--color-primary-dark);">泉州エリア</strong>：+¥1,000<br />
+                    <strong style="color:var(--color-primary-dark);">その他</strong>：交通費実費 +¥2,000<br />
+                    <span style="font-size:12px;color:var(--color-text-soft);">（片道 1 時間まで）</span>
+                  </span>
+                </dd>
+
+                <dt>対応時間</dt>
+                <dd>平日 9:00 〜 15:00（不定休）</dd>
+              </dl>
+            </div>
+          </div>
+
+          <!-- フォーム -->
+          <div class="form-frame fade-in">
+            <iframe
+              class="form-embed"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfpk2Y-G0O1aqeS0863AfScObX8PSBXZ0CTAhGK53Vf7gWEag/viewform?embedded=true"
+              title="お問い合わせフォーム"
+              loading="lazy"
+              width="100%"
+              height="1800"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0">読み込んでいます…</iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== RELATED NAV ========== -->
+  <section class="related-nav">
+    <div class="container">
+      <header class="related-nav__head fade-in">
+        <span class="section-head__en">explore more</span>
+        <h2>他のページを見る</h2>
+      </header>
+      <div class="related-nav__grid fade-in">
+        <a class="related-card" href="about.html">
+          <span class="related-card__en">about midwife</span>
+          <span class="related-card__ja">助産師について</span>
+          <span class="related-card__arrow">→</span>
+        </a>
+        <a class="related-card" href="services.html">
+          <span class="related-card__en">services</span>
+          <span class="related-card__ja">サービス・メニュー</span>
+          <span class="related-card__arrow">→</span>
+        </a>
+        <a class="related-card" href="hachidori.html">
+          <span class="related-card__en">in-clinic midwifery</span>
+          <span class="related-card__ja">はちどりのお家</span>
+          <span class="related-card__arrow">→</span>
+        </a>
+        <a class="related-card" href="news.html">
+          <span class="related-card__en">news</span>
+          <span class="related-card__ja">お知らせ</span>
+          <span class="related-card__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand-center">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <circle cx="15" cy="20" r="9" />
+            <circle cx="25" cy="20" r="9" />
+          </svg>
+        </span>
+        <span class="brand-name">小林助産院</span>
+        <span class="brand-tag">〜 ふれる 〜</span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h4>小林助産院</h4>
+          <p class="footer-address">
+            〒599-0212 大阪府阪南市自然田<br />
+            阪南市・泉南市エリア / 訪問専門
+          </p>
+
+          <p class="footer-hours-simple">
+            <span class="footer-hours-label">対応時間</span>
+            <span class="footer-hours-value">平日 9:00 〜 15:00（不定休）</span>
+          </p>
+
+          <div class="footer-actions">
+            <a class="footer-btn" href="tel:09014493157">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+              <span>090-1449-3157</span>
+            </a>
+            <a class="footer-btn" href="contact.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+              <span>CONTACT FORM</span>
+            </a>
+          </div>
+
+          <ul class="footer-sns" aria-label="SNS">
+            <li>
+              <a class="footer-sns__link" href="https://www.instagram.com/kobayashijyosanin" target="_blank" rel="noopener noreferrer" aria-label="Instagram（小林助産院）">
+                <span class="footer-sns__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </span>
+                <span class="footer-sns__text">
+                  <span class="footer-sns__name">小林助産院 〜ふれる〜</span>
+                  <span class="footer-sns__handle">@kobayashijyosanin</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="footer-sns__link footer-sns__link--hachidori" href="https://www.instagram.com/hachidorinoouchi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（はちどりのお家）">
+                <span class="footer-sns__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </span>
+                <span class="footer-sns__text">
+                  <span class="footer-sns__name">はちどりのお家</span>
+                  <span class="footer-sns__handle">@hachidorinoouchi</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-map" aria-label="地図">
+          <iframe
+            src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E9%98%AA%E5%8D%97%E5%B8%82&t=&z=11&output=embed"
+            title="訪問エリア地図（阪南市・泉南市）"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <span>© <span data-year>2026</span> 小林助産院 〜ふれる〜 All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
